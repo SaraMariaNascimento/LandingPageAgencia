@@ -1,12 +1,13 @@
 @import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/padding.scss";
 
 .container{
+    @include Padding;
     width: 100%;
     background-color: $purple-color;
-    border: 0.5px solid $gray-color;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .menu{
     font-size: 22px;
@@ -19,14 +20,4 @@
         color: #fff;
         text-decoration: none;
     }
-}
-.button{
-    padding: 15px 50px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: $green-color;
-    color: #fff;
-    cursor: pointer;
-    border: none;
 }

@@ -1,0 +1,24 @@
+@import "../../styles/mixins/padding.scss";
+.container{
+    @include Padding;
+    height: 100vh;
+    background-image: url("../../public/images/background-item.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding-top: 210px;
+}
+
+.text{
+    h1{
+        font-weight: bold;
+    }
+    p{
+        font-size: 30;
+        opacity: 0.8;
+    }
+}
