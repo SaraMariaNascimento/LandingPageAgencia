@@ -1,37 +1,56 @@
-/* components/Timeline.module.scss */
-.timeline {
-    position: relative;
-    width: 2px;
-    height: 100vh;
-    background: #333;
-    margin: 0 auto;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      background: #333;
-      border-radius: 50%;
-      transform: translateX(-50%);
-      transition: background-color 0.3s;
-    }
-  
-    /* Adicione outras animações e estilos conforme necessário */
-  }
-.timeline-entry {
-  /* Estilos padrão */
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
+$timeline-width: 0.125rem;
+$timeline-height: 60vh;
+$entry-width: 33.25rem;
+$entry-margin-bottom: 1.25rem;
+$entry-transform-y: 1.25rem;
+$entry-opacity-transition: 0.5s;
+$margin-bottom: 5rem;
 
-  &.appear {
-    /* Estilos quando a entrada está na visualização */
-    opacity: 1;
-    transform: translateY(0);
+.timeline {
+  position: relative;
+  width: $timeline-width;
+  height: $timeline-height;
+  background: #C480F7;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: $margin-bottom;
+  .leftText {
+    position: relative;
+    right: 32rem;
+    .timelineEntry {
+      flex-direction: row-reverse;
+      align-items: baseline;
+    }
   }
 }
 
+.timelineEntry {
+  opacity: 0;
+  display: flex;
+  width: $entry-width;
+  margin-bottom: $entry-margin-bottom;
+  align-items: center;
+  transform: translateY($entry-transform-y);
+  transition: opacity $entry-opacity-transition, transform $entry-opacity-transition;
+  color: #fff;
+  margin-bottom: $margin-bottom;
   
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: #C480F7;
+    margin-right: 0.625rem;
+    position: relative;
+    right: 0.25rem;
+  }
+  
+  .year {
+    width: 3.75rem;
+    font-weight: bold;
+  }
+}
