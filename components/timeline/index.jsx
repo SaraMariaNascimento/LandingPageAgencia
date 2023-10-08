@@ -23,19 +23,26 @@ const generateTimelineEntry = (year, text, alignRight) => {
 
 const Timeline = () => {
   return (
-    <div className={Styles.timeline}>
-      <div className={Styles.leftText}>
-        {generateTimelineEntry("2019", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", true)}
-      </div>
-      {generateTimelineEntry("2020", "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", false)}
-      <div className={Styles.leftText}>
-        {generateTimelineEntry("2021", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", true)}
-      </div>
-      {generateTimelineEntry("2022", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.", false)}
-      <div className={Styles.leftText}>
-        {generateTimelineEntry("2023", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", true)}
+    <div className={Styles.container}>
+        <div className={Styles.container_title}>
+        <h2>Nossa trajetória</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      <div className={Styles.timeline}>
+        <div className={Styles.leftText}>
+          {generateTimelineEntry("2019", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", true)}
+        </div>
+        {generateTimelineEntry("2020", "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", false)}
+        <div className={Styles.leftText}>
+          {generateTimelineEntry("2021", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", true)}
+        </div>
+        {generateTimelineEntry("2022", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.", false)}
+        <div className={Styles.leftText}>
+          {generateTimelineEntry("2023", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", true)}
+        </div>
       </div>
     </div>
+
   );
 };
 

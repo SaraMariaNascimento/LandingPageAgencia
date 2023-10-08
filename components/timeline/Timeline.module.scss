@@ -5,7 +5,21 @@ $entry-margin-bottom: 1.25rem;
 $entry-transform-y: 1.25rem;
 $entry-opacity-transition: 0.5s;
 $margin-bottom: 5rem;
-
+.container_title{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    font-size: 4.0625rem;
+    margin: 0;
+  }
+  p{
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: $margin-bottom;
+  }
+}
 .timeline {
   position: relative;
   width: $timeline-width;
