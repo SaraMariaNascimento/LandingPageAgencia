@@ -1,0 +1,15 @@
+@import "./../../styles/mixins/colors.scss";
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.texts{
+    span{
+        font-size: 1.875rem;
+        font-weight: 600;
+        color: $green-color;
+    }
+
+}

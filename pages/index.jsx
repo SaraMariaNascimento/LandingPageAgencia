@@ -2,7 +2,7 @@ import Header from '@/components/header'
 import styles from "./home.module.scss";
 import Welcome from '@/components/welcome';
 import Timeline from '@/components/timeline';
-
+import Form from '@/components/form';
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Header/>
       <Welcome/>
       <Timeline/>
+      <Form/>
     </main>
   )
 }
